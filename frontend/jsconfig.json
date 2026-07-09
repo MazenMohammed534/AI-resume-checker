@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "customConditions": [],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}
