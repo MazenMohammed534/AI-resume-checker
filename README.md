@@ -141,6 +141,18 @@ GEMINI_MODEL=gemini-2.5-flash
 
 ## Running the Application
 
+### With Docker
+
+```bash
+docker compose up --build
+```
+
+This will start:
+
+- MongoDB on port 27017
+- Backend on port 5000
+- Frontend on port 5173
+
 ### Start the backend
 
 ```bash
