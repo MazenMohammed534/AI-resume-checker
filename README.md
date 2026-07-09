@@ -41,21 +41,55 @@ AI Resume Checker is designed to make resume optimization simpler and more actio
 ## Project Structure
 
 ```text
-backend/
-  src/
-    config/
-    middleware/
-    models/
-    routes/
-    services/
-    utils/
-frontend/
-  src/
-    api/
-    components/
-    context/
-    hooks/
-    pages/
+AI Resume Checker
+├── backend/
+│   └── src/
+│       ├── config/
+│       ├── middleware/
+│       ├── models/
+│       ├── routes/
+│       ├── services/
+│       └── utils/
+└── frontend/
+    └── src/
+        ├── api/
+        ├── components/
+        ├── context/
+        ├── hooks/
+        └── pages/
+```
+
+### Simple Architecture Diagram
+
+```text
+User → Frontend (React/Vite)
+          │
+          ▼
+   API Requests
+          │
+          ▼
+Backend (Express/Node.js)
+          │
+   ├── Auth & Users
+   ├── Resume Upload & Parsing
+   ├── ATS Analysis & AI Rewrites
+   └── MongoDB Storage
+```
+
+### Flow of a Resume Review
+
+```text
+Upload Resume
+   ↓
+Parse & Store
+   ↓
+Analyze ATS Score
+   ↓
+Suggest Improvements
+   ↓
+Save New Version
+   ↓
+Show Dashboard & History
 ```
 
 ## Prerequisites
