@@ -201,10 +201,6 @@ The backend exposes REST endpoints for:
 - The backend uses modular route and service structure for scalability.
 - AI analysis is powered through the Gemini service layer.
 
-## License
-
-This project is licensed under the ISC License.
-
 ## Contributing
 
 Contributions are welcome. If you want to improve the project, feel free to open an issue or submit a pull request.
