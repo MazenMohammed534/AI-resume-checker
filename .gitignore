@@ -12,6 +12,11 @@ node_modules/
 !**/.env.example
 !**/.env.sample
 
+# Docker local runtime files
+*.local
+*.env.local
+.docker/
+
 # Build outputs
 /dist/
 /build/

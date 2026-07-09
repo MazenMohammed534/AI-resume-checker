@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   mongo:
     image: mongo:7
@@ -15,11 +13,13 @@ services:
       context: ./backend
     container_name: ai-resume-backend
     restart: unless-stopped
+    env_file:
+      - ./backend/.env
     environment:
       NODE_ENV: development
       PORT: 5000
       MONGO_URI: mongodb://mongo:27017/ai-resume-checker
-      JWT_SECRET: dev-secret
+      JWT_SECRET: ${JWT_SECRET:-change-me-in-local-dev}
       JWT_EXPIRES_IN: 7d
       COOKIE_NAME: arr_token
       CLIENT_ORIGIN: http://localhost:5173
@@ -38,6 +38,8 @@ services:
       context: ./frontend
     container_name: ai-resume-frontend
     restart: unless-stopped
+    env_file:
+      - ./frontend/.env
     environment:
       VITE_API_URL: http://localhost:5000
     ports:

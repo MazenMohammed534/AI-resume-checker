@@ -144,6 +144,8 @@ GEMINI_MODEL=gemini-2.5-flash
 ### With Docker
 
 ```bash
+cp backend/.env.example backend/.env
+cp frontend/.env.example frontend/.env
 docker compose up --build
 ```
 
@@ -152,6 +154,8 @@ This will start:
 - MongoDB on port 27017
 - Backend on port 5000
 - Frontend on port 5173
+
+> For local development, you can edit the copied .env files without committing them.
 
 ### Start the backend
 
